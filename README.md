@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository will serve as your center for all lecture portions of the Front End Development C136 course provided by MThree Global in August 2021. Please see the [instructions](#instructions) below for a more detailed walkthrough of how to use the repository.
+This repository will serve as your center for all lecture portions of the Front End Development C165 course provided by MThree Global in November 2021. Please see the [instructions](#instructions) below for a more detailed walkthrough of how to use the repository.
 
 ## Instructions
 
