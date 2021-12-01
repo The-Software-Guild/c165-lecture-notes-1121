@@ -12,8 +12,6 @@ Learning goals for week 0 day 1 =>
 
 ### 1. Day 0 Review
 
-
-
 ### 2. Introduction to Agile Project Management
 
 To understand Agile Software development we must look no further than the, "Manifesto for Agile Software Devlopment." The Manifesto states:
@@ -59,6 +57,10 @@ Kanban is all about visualizing your work, limiting [work in progress](https://w
     Japanese for Sign Board, Kanban is a popular framework used to implement agile and DevOps software development. It requires real-time communication of capacity and full transparency of work. Work items are represented visually on a kanban board, allowing team members to see the state of every piece of work at any time.
 
 ### 4. Html & CSS Quiz
+
+[html](https://academy.engagelms.com/mod/quiz/view.php?id=45401)
+
+[css](https://academy.engagelms.com/mod/quiz/view.php?id=45424)
 
 ### 5. Vanilla Engage
 
