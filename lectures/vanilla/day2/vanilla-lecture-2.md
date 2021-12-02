@@ -1,6 +1,6 @@
 # C165 Week 1 Vanilla JS Lecture 2
 
-Learning goals for week 0 day 2 => 
+Learning goals for week 0 day 2 => We are collectively solidifying our base knowledge of JS in order to move into more advanced concepts in the coming week.
 
 ## Agenda
 
