@@ -1,20 +1,36 @@
 # C165 Week 1 Vanilla JS Lecture 3
 
-Learning goals for week 0 day 3 => Today have explore  
+Learning goals for week 0 day 3 => Today have explore data structures and algorithms within a very specific context.
 
 ## Agenda
 
 1) Day 2 Recap
-2) Algorithm Solving Proccess
-3) What to Study and How
-4) Time & Space Complexity - BigO Notation
-5) Recursion
+2) Data Structures
+3) Algorithm Solving Proccess
+4) What to Study and How
+5) Time & Space Complexity - BigO Notation
+6) Recursion
+7) Weekends Assignment
 
 ### 1. Day 2 Recap
 
 - [syntax](https://github.com/airbnb/javascript)
 
-### 2. Algorithm Solving Proccess
+### 2. Data Structures
+
+[visulaizations](https://visualgo.net/en)
+
+- search & linked lists
+- stacks
+- quueues
+- trees
+- sets
+- search tries
+- graphs
+- hash tables
+- arrays
+
+### 3. Algorithm Solving Proccess
 
 1. Think. Analyze the problem silently and then verbalize your thoughts once they are collected. Feel free to take personal notes. Personally, there is nothing more uncomfrotbale then someone just jumping head first into a problem, that tends to show you have an itchy trigger finger and you don't thin through things.
 
@@ -26,13 +42,13 @@ Learning goals for week 0 day 3 => Today have explore
 
 5. Analyze your results in the terms of time and space complexity but also relations and importance.
 
-### 3. What to Study and How
+### 4. What to Study and How
 
 [leetcode](https://leetcode.com/)
 
 [interviews school](https://interviews.school/)
 
-### 4. Time & Space Complexity - BigO Notation
+### 5. Time & Space Complexity - BigO Notation
 
 When we consider the complexity of an algorithm, we shouldn’t really care about the exact number of operations that are performed; instead, **we should care about how the number of operations relates to the problem size.**
 
@@ -96,7 +112,7 @@ As in quadratic time complexity, you should avoid algorithms with exponential ru
 
 _*see-assets_
 
-### 5. Recursion
+### 6. Recursion
 
 [visualization](https://quanticdev.com/algorithms/primitives/recursion-visualization/)
 
@@ -143,3 +159,13 @@ Though right now we’ve only mentioned direct recursive calls, there are actual
 - Structural vs. Generative
 
 - Direct, Indirect, and Anonymous Recursion
+
+### 7. Weekends Assignments
+
+- finish all previously assigned engage content (html, css, JS)
+
+- practice alg (leetcode/edabit)
+
+- AWS for JPMC
+
+- start Node.js engage content
