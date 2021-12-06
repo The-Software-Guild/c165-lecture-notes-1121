@@ -8,7 +8,6 @@
 // syntactic sugar
 
 
-
 function squaredFunction(num) {
     return num * num;
 };
@@ -27,36 +26,16 @@ function anotherFunction() {
 module.exports = {
     squaredFx: squaredFunction,
     anotherFx: anotherFunction,
-    whatever: 'string of whatever',
+    whatever: 'anything',
     numnum: 4,
     bool: false
 } /// 
 
 
+// console.log(squaredFunction)
 
 
 
-
-
-
-
-// literals
-// 3
-// true
-// ''
-// {}
-// obj's in JS pair similar detailed information about one thing
-
-// {
-//     key: value
-// }
-
-// const instructor = {
-//     name: 6,
-//     location: 'brooklyn'
-// }
-
-// console.log(instructor.name) // patrick
 
 
 // module.exports = {
