@@ -8,12 +8,6 @@
 // syntactic sugar
 
 
-// all functionality of calculator 
-// use that functionality endlesslesy without writing more
-
-
-
-
 
 function squaredFunction(num) {
     return num * num;
