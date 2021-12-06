@@ -1,23 +1,20 @@
-# Week 1 Lecture - C136
+# C165 Week 1 Node Lecture 0
 
 Learnign goals for week 1 => Familiarize ourselves with node.js while refreshign parts of vanilla JS that will help us move into writing our own servers and RESTful API's with express.js by the end of the week.
 
 ## Agenda
 
-    1) Introductions
-    2) Class Overview & Lecture Note Walkthrough
-    3) Problem Solving Process*
-    4) How To Ask a "Good" Question
-    5) Vanilla JS Refresh
-    6) Node.js => Node Patterns and Modularization
+    1) Node Week 1 Schedule Change
+    2) Problem Solving Process*
+    3) How To Ask a "Good" Question
+    4) Vanilla JS Refresh
+    5) Node.js => Node Patterns and Modularization
 
-### 1. Introductions
+### 1. Node Week 1 Schedule Change
 
-### 2. Class Overview & Lecture Note Walkthrough
+- Wednesday Dec 8th will be inverted. You will work on an assignment in the morning, we will meet for attendance and standup around noon, then we will go right into lecture.
 
-[lecture-notes-repo](https://github.com/The-Software-Guild/mthree-c136-0821-lectures)
-
-### 3. Problem Solving Process
+### 2. Problem Solving Process
 
 Starting and maintaining a good problem solving process is a **vital** skill as a programmer. This is especially important for students and soon to be junior level devs.
 
