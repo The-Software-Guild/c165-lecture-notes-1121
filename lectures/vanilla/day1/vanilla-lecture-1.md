@@ -1,4 +1,4 @@
-# C165 Week 1 Vanilla JS Lecture 1
+# C165 Week 0 Vanilla JS Lecture 1
 
 Learning goals for week 0 day 1 => To get a high level overview of modern software porduct development workflows.
 

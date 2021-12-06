@@ -1,4 +1,4 @@
-# C165 Week 1 Vanilla JS Lecture 0
+# C165 Week 0 Vanilla JS Lecture 0
 
 Learning goals for week 0 => There will be lots of housekeeping as we become acclimated to this courses learning content, materials, and procedures.
 
