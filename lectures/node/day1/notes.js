@@ -2,38 +2,41 @@
 
 // callback fx's
 
-const cb = (num1c, num2c) => {
-     console.log(num1c + num2c)
-}
+const cb = (num1cb, num2cb) => {
+     console.log(num1cb + num2cb)
+} // a fx that is passed into another function as an argument but not constrained to that paradiam
 
+// cb(3, 4) // 7
 
-const higherOrderFunction = (cb, num1, num2) => {
+const higherOrderFunction = (callback, num1, num2) => {
      // parameters act as local variables within a givin block scope
-     // console.log(arguments[1])
+     // const something = 'whatever'
+     // console.log(arguments[1]) // the keyword arguments is an array like object that contains all arguments passed in to the fx invocation
 
-     cb(num1, num2)
+     callback(num1, num2)
 } // output to the console two numbers added together
 
 
-// higherOrderFunction(2, 3) // 9
 
-// arguments in JS are arbitrary meaning...
+higherOrderFunction(cb, 2, 3, true, 8, 'string') // 5
 
+// arguments in JS are arbitrary meaning... 
 
-// arrow fx's do NOT create thier own lexical scope
-// the value of this will be different
+// a block of code is the area created by the curly braces within a function expression
 
+// arrow fx's do NOT have their own lesxical scope and therefore the keyword this does NOT refer to the fx itself when used inside of an arrow fxs block
 
-// scoping
-// global
-// function/block
+// the term scope refers to the availability fo variables 
+// local, global, block/function scoped
 
+// var, let, const => hoisting, reasignments, scoping
+// var - global
+// let, const - specific to the declaration location 
 
 function closureExample() {
      console.log(name)
      
-
-     const insideFx = () => {
+     function insideFx() {
           var name = 'patrick'
           console.log('inside')
      }
@@ -41,15 +44,20 @@ function closureExample() {
      insideFx()
 }
 
-closureExample() //error 
+closureExample() // 
 
+// hoisting => is when certain variable or fx declerations are brought to the top of their current scope and written into memory there
 
+// js single threaded LIFO => store and youa re using the cashier to checkout
 
-// js single threaded LIFO
-
-// 1, 2, 3, 4
+// 3, 2, 1
 
 // Node non-blocking i/o async
+
+// authentication
+// server => a bunch of code whose job is to handle req and illicit res
+// api -> is the rules for hanlding the req/res
+
 
 
 // In computing, a stateless protocol is a communications protocol in which no session information is retained by the receiver, usually a server. 
@@ -72,16 +80,19 @@ closureExample() //error
 
 // 3 ways we can add state to a application === persist data 
 
+//1
 // cookies -> js/browser based
 // localStorage/sessionStorage -> js/browser based
 
+
+//2
 // database -> external
 
 
 // cookies are incredible small usually under 4kb
 // can expire 
 
-
+localStorage.
 
 localStorage.setItem('key', 'value')
 localStorage.removeItem('key')
@@ -99,16 +110,16 @@ const exampleStorage = localStorage.getItem()
 //     payload ={}
 // }
 
-const jsObjWeKnow = {
-    property: 'value',
-    anotherProp: function() {}
-}
+// const jsObjWeKnow = {
+//     property: 'value',
+//     anotherProp: function() {}
+// }
 
 // JSON 
-const jsonObj = {
-    "property": value,
-    "anotherProperty": 'some value'
-} // must use double quotes for string named properties
+// const jsonObj = {
+//     "property": "value",
+//     "anotherProperty": 'some value'
+// } // must use double quotes for string named properties
 
 // we can send req and repsonses as strings but if we need more complex data types like objects or arrays 
 // we must wrap them in a JSON obj
