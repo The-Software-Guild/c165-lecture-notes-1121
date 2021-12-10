@@ -11,9 +11,15 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 
+// :wildcard = propertyValue
+https://www.example.com/routePath/wildCardPlaceholder
+// req.params = wildCardPlaceholder
 
 // routes
-app.get('/home', ) // 
+app.get('/home/:wildCard', (req, res, next) => {
+     // req.params = :wildcard
+     // req.params = ' an idea i will want to use to filter, or interact with or delte'
+}) // 
 
 
 

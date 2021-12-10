@@ -33,7 +33,6 @@ const initialString = 'hello' // 'olleh'
 // Overall Project Objectives:
 // Develop a Backend server with functioning endpoints able to CRUD the recycling items upon intake.
 // Parameterize the server by allowing for GET ONE and querying routes
-// Use TDD to write unit tests for all routes
 // Make use of Express Router, error handling, and status codes
 
 // Since we haven't started connecting to MongoDB quite yet, you can just save your items in an recycledItems 
@@ -66,11 +65,11 @@ const initialString = 'hello' // 'olleh'
 // PUT (update) an existing item
 // You'll need to pass the uuid you added when POSTing new items as a URL Parameter to the endpoint in order to have a reference to the object you want to update or delete.
 
-// Lastly, take a screenshot demonstrating the complete routing functionality of this server application via Postman and also any unit tests
+// Lastly, take a screenshot demonstrating the complete routing functionality of this server application via Postman
 
 // Part B: react-refactor
 // Refactor the event werkbook from Section 2 Part A into a multi-page react application in which a single exercie is displayed per each page.
-// The application must be fully styled and responsive
+// The application must be fully styled and responsive (using a combination of css-grid, css flexbox, and media queries .... NOT bootstrap)
 
 // PLEASE KEEP TRACK OF, AND ESTIMATE HOW LONG THE ASSESSMENT TOOK YOU TO COMPLETE THIS TIME. 
 // THIS IS PURELY FOR ME AND TO BETTER PACE THE FUTURE ASSIGNMENTS AND OVERALL COURSE PACING
