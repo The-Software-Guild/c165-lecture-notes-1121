@@ -5,12 +5,12 @@ const morgan = require('morgan')
 // constants
 const PORT = 5000;
 
+// fake data aray
 const arrayEx = [{}, {}]
 
 // application level middleware
 app.use(express.json())
 app.use(morgan('dev'))
-
 
 
 // routes
