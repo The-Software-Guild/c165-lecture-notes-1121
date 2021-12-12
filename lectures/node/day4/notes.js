@@ -25,15 +25,15 @@
 
 
 
-const someObj = {
-     key: 'value',
-     propertyName1: 'value1',
-     somethignElse: false
-}
+// const someObj = {
+//      key: 'value',
+//      propertyName1: 'value1',
+//      somethignElse: false
+// }
 
-console.log(someObj.somethignElse) //false
+// console.log(someObj.somethignElse) //false
 
 
-req.query
-req.body
-req.header
+// req.query
+// req.body
+// req.header
