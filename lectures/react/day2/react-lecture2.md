@@ -1,189 +1,96 @@
-# C165 Week 2 React Lecture 0
+# C165 Week 2 React Lecture 2
 
-Learnign goals for week 2 => Re-focus. As we head into our third week we refocus and prepare for the busiest week of the program and our last full week before the holidays. Let's plan accodringly. Feel free to reach out for tips, tricks, ...etc.
+Learnign goals for react day 2 => 
 
 ## Agenda
 
-    1) Engage Content
-    2) Express Review
-    3) Testing
-    4) Socket IO
+    1) Day 1 Recap
+    2) Routing
+    3) Composition vs Inheritance
+    4) Unit Testing with Jest & Enzyme
 
-### 2. Express.js
+### 1. Day 1 Recap
 
-req, res, and next are called [streams](https://medium.com/developers-arena/streams-piping-and-their-error-handling-in-nodejs-c3fd818530b6), which are special node objects.
+- Vanilla DOM
+- Constructor Functions & Classes
+- Intro to React
+- Event Handling
 
-http verbs => express routing methods
-CRUD vs HTTP
+### 2. Routing
 
-    1)
-    2)
-    3)
-    4)
+Components are the heart of React's powerful, declarative programming model. [React Router](https://reactrouter.com/) is a collection of navigational components that compose declaratively with your application. Whether you want to have bookmarkable URLs for your web app or a composable way to navigate in React Native.
 
-Each method takes a path and a callback function – Express calls it a "handler", more or less what Node docs call a "request handler." It handles the request that comes in via that particular HTTP verb.
+### 3. Composition vs Inheritance
 
-resource operation = ______ + ______ ?
+### 4. Unit Testing with Jest & Enzyme
 
-*query strings are not part of the route path.
+As your codebase expands, small errors and edge cases you don’t expect can cascade into larger failures. Bugs lead to bad user experience and ultimately, business losses. One way to prevent fragile programming is to test your code before releasing it into the wild.
 
-*resource operation does not equal endpoint!
+In this guide, we will cover different, automated ways to ensure your app works as expected, ranging from static analysis to end-to-end tests.
 
-#### **Nodemon**
+We're humans, and humans make mistakes. Testing is important because it helps you uncover these mistakes and verifies that your code is working. Perhaps even more importantly, testing ensures that your code continues to work in the future as you add new features, refactor the existing ones, or upgrade major dependencies of your project.
 
-*check* *check* .... *check — 1 2*
+There is more value in testing than you might realize. One of the best ways to fix a bug in your code is to write a failing test that exposes it. Then when you fix the bug and re-run the test, if it passes it means the bug is fixed, never reintroduced into the code base.
 
-#### **API's**
+Tests can also serve as **documentation** for new people joining your team. For people who have never seen a codebase before, reading tests can help them understand how the existing code works.
 
-An application programming interface is a computing interface that defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made, how to make them, the data formats that should be used, the conventions to follow, etc. Below are a few of the most common conventions:
+Last but not least, more automated testing means less time spent with manual QA, freeing up valuable time.
 
-##### _**SOAP**_
+#### **Static Analysis**
 
-**SOAP** (Simple Object Access Protocol) is a standards-based web services access protocol that has been around for a long time. Originally developed by Microsoft, SOAP isn’t as simple as the acronym would suggest. It uses XML and structure to expose their own arbitrary set of operations.
+The first step to improve your code quality is to start using static analysis tools. Static analysis checks your code for errors as you write it, but without running any of that code.
 
-##### _**REST**_
+Linters analyze code to catch common errors such as unused code and to help avoid pitfalls, to flag style guide no-nos like using tabs instead of spaces (or vice versa, depending on your configuration).
 
-Instead of using XML to make a request, **REST** (usually) relies on a simple URL. In some situations you must provide additional information, but most web services using REST rely exclusively on using the URL approach. REST can use four different HTTP 1.1 verbs (GET, POST, PUT, and DELETE) to perform tasks.
+Type checking ensures that the construct you’re passing to a function matches what the function was designed to accept, preventing passing a string to a counting function that expects a number, for instance.
 
-Unlike SOAP, REST doesn’t have to use XML to provide the response. You can find REST-based web services that output the data in Command Separated Value (CSV), JavaScript Object Notation (JSON) and Really Simple Syndication (RSS). The point is you can obtain the output you need, in a form that’s easy to parse within the language you’re using for your application.
+#### **Writing Testable Code**
 
-The guidlines for a "RESTful" api:
+To start with tests, you first need to write code that is testable. Consider an aircraft manufacturing process - before any model first takes off to show that all of its complex systems work well together, individual parts are tested to guarantee they are safe and function correctly. For example, wings are tested by bending them under extreme load; engine parts are tested for their durability; the windshield is tested against simulated bird impact.
 
-1) client-server seperation
+Software is similar. Instead of writing your entire program in one huge file with many lines of code, you write your code in multiple small modules that you can test more thoroughly than if you tested the assembled whole. In this way, writing testable code is intertwined with writing clean, modular code.
 
-2) statelessness
+To make your app more testable, start by separating the view part of your app—your React components—from your business logic and app state (regardless of whether you use Redux, MobX or other solutions). This way, you can keep your business logic testing—which shouldn’t rely on your React components—independent of the components themselves, whose job is primarily rendering your app’s UI!
 
-3) uniform interface
+Theoretically, you could go so far as to move all logic and data fetching out of your components. This way your components would be solely dedicated to rendering. Your state would be entirely independent of your components. Your app’s logic would work without any React components at all!
 
-4) cacheable
+You can test React components similar to testing other JavaScript code.
 
-5) layered system
+There are a few ways to [test React components](https://reactjs.org/docs/testing.html). Broadly, they divide into two categories:
 
-6) code on demand
+- Rendering component trees in a simplified test environment and asserting on their output.
 
-[Web Services](https://academy.engagelms.com/mod/page/view.php?id=45473)
+- Running a complete app in a realistic browser environment (also known as “end-to-end” tests).
 
-[REST API Design](https://academy.engagelms.com/mod/page/view.php?id=45475)
+### **Structuring Tests**
 
-##### _**N+1**_
+Your tests should be short and ideally test only one thing. Let's start with an example unit test written with Jest:
 
-[REST API N+1 Problem](https://restfulapi.net/rest-api-n-1-problem/)
-
-#### **Middleware**
-
-Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
-
-Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
-
-Middleware functions can perform the following tasks:
-
-- Execute any code.
-- Make changes to the request and the response objects.
-- End the request-response cycle.
-- Call the next middleware function in the stack.
-
-If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
-
-_see assets_
-
-#### **URL Parameters & Queries**
-
-[Anatomy of a URL](https://doepud.co.uk/blog/anatomy-of-a-url)
-
-##### **Parts of a URL**
-
-- Base: http://www.amazon.com
-- Endpoint: http://www.amazon.com/images
-- Parameter: http://www.amazon.com/images/1skcasnjasndjsn
-
-*see assets*
-
-    accessible via req.params & req.query in key:value formatted objects
-
-In the above example **1skcasnjasndjsn** is the parameter and the value of our key:value pair.
-
-URL parameters are used to create a "GET ONE" route and would look like this with **movieId** being the key and inserted via a wildcard syntax(colon before), somethign we should be familiar with from react router match params.
-
-```Javascript
-movieRouter.get(":movieId", (req, res) => {
-    //some stuff
-})
+```javascript
+it('given a date in the past, colorForDueDate() returns red', () => {
+  expect(colorForDueDate('2000-10-20')).toBe('red');
+});
 ```
 
-##### **Query String (typically used to filter results)**
+The test is described by the string passed to the it function. Take good care writing the description so that it’s clear what is being tested. Do your best to cover the following:
 
-- Begins with the "?"
-- Built of key:value pairs
-- Multiple queries seperated with the "&"
+Given - some precondition
+When - some action executed by the function that you’re testing
+Then - the expected outcome
+This is also known as AAA (Arrange, Act, Assert).
 
-Here is an example of a URL with query strings attached:
+Jest offers describe function to help structure your tests. Use describe to group together all tests that belong to one functionality. Describes can be nested, if you need that. Other functions you'll commonly use are beforeEach or beforeAll that you can use for setting up the objects you're testing. Read more in the Jest api reference.
 
-    https://stackabuse.com/?page=2&limit=3
+If your test has many steps or many expectations, you probably want to split it into multiple smaller ones. Also, ensure that your tests are completely independent of one another. Each test in your suite must be executable on its own without first running some other test. Conversely, if you run all your tests together, the first test must not influence the output of the second one.
 
-    The query parameters are the actual key-value pairs like page and limit with values of 2 and 3, respectively.
+Lastly, as developers we like when our code works great and doesn't crash. With tests, this is often the opposite. Think of a failed test as of a good thing! When a test fails, it often means something is not right. This gives you an opportunity to fix the problem before it impacts the users.
 
-Your query parameters can be retrieved from the query object on the request object sent to your route (req.query). It is in the form of an object in which you can directly access the query parameters you care about. In this case Express handles all of the URL parsing for you and exposes the retrieved parameters as this object.
+#### **Unit tests**
 
-#### **Error Handling**
+Unit tests cover the smallest parts of code, like individual functions or classes.
 
-Error Handling refers to how Express catches and processes errors that occur both synchronously and asynchronously. Express comes with a default error handler so you don’t need to write your own to get started.
+When the object being tested has any dependencies, you’ll often need to mock them out, as described in the next paragraph.
 
-It’s important to ensure that Express catches all errors that occur while running route handlers and middleware.
+The great thing about unit tests is that they are quick to write and run. Therefore, as you work, you get fast feedback about whether your tests are passing. Jest even has an option to continuously run tests that are related to code you’re editing: Watch mode.
 
-Errors that occur in synchronous code inside route handlers and middleware require no extra work. If synchronous code throws an error, then Express will catch and process it. For example:
-
-    app.get('/', function (req, res) {
-        throw new Error('BROKEN') // Express will catch this on its own.
-    })
-
-For errors returned from asynchronous functions invoked by route handlers and middleware, you must pass them to the next() function, where Express will catch and process them. For example:
-
-    app.get('/', function (req, res, next) {
-        fs.readFile('/file-does-not-exist', function (err, data) {
-        if (err) {
-            next(err) // Pass errors to Express.
-        } else {
-            res.send(data)
-        }
-        })
-    })
-
-#### **Postman**
-
-[REST Web Services and Fetch](https://academy.engagelms.com/mod/page/view.php?id=45474)
-
-#### **Express Router**
-
-A router object is an isolated instance of middleware and routes. You can think of it as a “mini-application,” capable only of performing middleware and routing functions. Every Express application has a built-in app router.
-
-A router behaves like middleware itself, so you can use it as an argument to ```app.use()``` or as the argument to another router’s ```use()``` method.
-
-The top-level express object has a ```Router()``` method that creates a new router object.
-
-Once you’ve created a router object, you can add middleware and HTTP method routes (such as get, put, post, and so on) to it just like an application.
-
-### 3. Testing
-
-#### **Test-Driven Development (TDD)**
-
-TDD refers to a style of programming in which three activities are tightly interwoven: coding, testing (in the form of writing **unit tests**) and design (in the form of refactoring).
-
-It can be succinctly described by the following set of rules:
-
-- write a **single** unit test describing an aspect of the program
-
-- run the test, which should fail because the program lacks that feature
-
-- write **just enough** code, the simplest possible, to make the test pass
-
-- **refactor** the code until it conforms to the simplicity criteria
-
-- repeat, **accumulating** unit tests over time
-
-[Testing RN](https://reactnative.dev/docs/testing-overview)
-
-[Testing React.js](https://reactjs.org/docs/testing.html)
-
-### 4. Socket IO
-
-[Socket IO & Testing Node](https://academy.engagelms.com/mod/scorm/player.php)
+#### **Mocking & Integration Tests**
