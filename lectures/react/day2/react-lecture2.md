@@ -1,189 +1,278 @@
-# C165 Week 2 React Lecture 0
+# C165 Week 2 React Lecture 1
 
-Learnign goals for week 2 => Re-focus. As we head into our third week we refocus and prepare for the busiest week of the program and our last full week before the holidays. Let's plan accodringly. Feel free to reach out for tips, tricks, ...etc.
+Learnign goals for react day 1 => As we dive into React we first touch on a few vanilla JS concepts that will prepare us for using the most popular javascipt framework in the world. Buckle-up.
 
 ## Agenda
 
-    1) Engage Content
-    2) Express Review
-    3) Testing
-    4) Socket IO
+    1) Day 0 Recap
+    2) Vanilla DOM Tree
+    3) Constructor Functions & Classes
+    4) Introduction to React.js
+    5) Event Handling
 
-### 2. Express.js
+### 1. Day 0 Recap
 
-req, res, and next are called [streams](https://medium.com/developers-arena/streams-piping-and-their-error-handling-in-nodejs-c3fd818530b6), which are special node objects.
+- Express.js
+- Middleware
+- Nodemon
+- API's
+- Routing
+- Parameterization
+- TDD
+- Mocha & Chai
+- Socket IO
 
-http verbs => express routing methods
-CRUD vs HTTP
+### 2. Vanilla DOM Tree
 
-    1)
-    2)
-    3)
-    4)
+#### **The Document Object**
 
-Each method takes a path and a callback function – Express calls it a "handler", more or less what Node docs call a "request handler." It handles the request that comes in via that particular HTTP verb.
+*_main.js_
 
-resource operation = ______ + ______ ?
+#### **Intro To The DOM**
 
-*query strings are not part of the route path.
+The DOM (Document Object Model) is a object that represents the HTML and CSS of a web page. The DOM allows us to use JavaScript to interface with what the user sees.
 
-*resource operation does not equal endpoint!
+There are a few ways to select elements from the DOM.
 
-#### **Nodemon**
+    document.getElementById()
 
-*check* *check* .... *check — 1 2*
+    document.getElementsByClassName()
 
-#### **API's**
+    document.querySelector()
 
-An application programming interface is a computing interface that defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made, how to make them, the data formats that should be used, the conventions to follow, etc. Below are a few of the most common conventions:
+Notice the "s" on elements in getElementsByClassName. **Any DOM method with the plural elements will return an array.** You are able to loop over each element, or select an individual element with bracket notation.
 
-##### _**SOAP**_
+    document.createElement() takes a string of the tag name you want to create. It then returns the element.
 
-**SOAP** (Simple Object Access Protocol) is a standards-based web services access protocol that has been around for a long time. Originally developed by Microsoft, SOAP isn’t as simple as the acronym would suggest. It uses XML and structure to expose their own arbitrary set of operations.
+The most common way to append this to the DOM is to first select the parent, and call it's .appendChild.
 
-##### _**REST**_
+You may be asking why we wouldn't just write this in our HTML.
 
-Instead of using XML to make a request, **REST** (usually) relies on a simple URL. In some situations you must provide additional information, but most web services using REST rely exclusively on using the URL approach. REST can use four different HTTP 1.1 verbs (GET, POST, PUT, and DELETE) to perform tasks.
+JavaScript helps us dynamically render our apps. We'll be using JavaScript to get us dynamic data, and then change how the webpage looks depending.
 
-Unlike SOAP, REST doesn’t have to use XML to provide the response. You can find REST-based web services that output the data in Command Separated Value (CSV), JavaScript Object Notation (JSON) and Really Simple Syndication (RSS). The point is you can obtain the output you need, in a form that’s easy to parse within the language you’re using for your application.
+If a user wanted to take things from a list, or add to a list, we would use JavaScript to control that.
 
-The guidlines for a "RESTful" api:
+Much of your DOM manipulation will happen after the user does something. To make the user able to change what they see, you'll need to learn to use [event listeners](https://coursework.vschool.io/event-listeners/)
 
-1) client-server seperation
+### 3. Constructor Functions & Classes
 
-2) statelessness
+Sometimes we need a "blueprint" for creating many objects of the same "type".
 
-3) uniform interface
+The way to create an "object type", is to use an object constructor function.
 
-4) cacheable
+Objects of the same type are created by calling the constructor function with the new keyword:
 
-5) layered system
+```javascript
+const myFather = new Person("John", "Doe", 50, "blue");
 
-6) code on demand
-
-[Web Services](https://academy.engagelms.com/mod/page/view.php?id=45473)
-
-[REST API Design](https://academy.engagelms.com/mod/page/view.php?id=45475)
-
-##### _**N+1**_
-
-[REST API N+1 Problem](https://restfulapi.net/rest-api-n-1-problem/)
-
-#### **Middleware**
-
-Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
-
-Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
-
-Middleware functions can perform the following tasks:
-
-- Execute any code.
-- Make changes to the request and the response objects.
-- End the request-response cycle.
-- Call the next middleware function in the stack.
-
-If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
-
-_see assets_
-
-#### **URL Parameters & Queries**
-
-[Anatomy of a URL](https://doepud.co.uk/blog/anatomy-of-a-url)
-
-##### **Parts of a URL**
-
-- Base: http://www.amazon.com
-- Endpoint: http://www.amazon.com/images
-- Parameter: http://www.amazon.com/images/1skcasnjasndjsn
-
-*see assets*
-
-    accessible via req.params & req.query in key:value formatted objects
-
-In the above example **1skcasnjasndjsn** is the parameter and the value of our key:value pair.
-
-URL parameters are used to create a "GET ONE" route and would look like this with **movieId** being the key and inserted via a wildcard syntax(colon before), somethign we should be familiar with from react router match params.
-
-```Javascript
-movieRouter.get(":movieId", (req, res) => {
-    //some stuff
-})
+const myMother = new Person("Sally", "Rally", 48, "green");
 ```
 
-##### **Query String (typically used to filter results)**
+#### **The this Keyword**
 
-- Begins with the "?"
-- Built of key:value pairs
-- Multiple queries seperated with the "&"
+In JavaScript, the thing called _**this**_ is the object that "owns" the code.
 
-Here is an example of a URL with query strings attached:
+The value of _**this**_, when used in an object, is the object itself.
 
-    https://stackabuse.com/?page=2&limit=3
+In a constructor function _**this**_ does not have a value. It is a substitute for the new object. The value of _**this**_ will become the new object when a new object is created.
 
-    The query parameters are the actual key-value pairs like page and limit with values of 2 and 3, respectively.
+#### **Built-in JavaScript Constructors**
 
-Your query parameters can be retrieved from the query object on the request object sent to your route (req.query). It is in the form of an object in which you can directly access the query parameters you care about. In this case Express handles all of the URL parsing for you and exposes the retrieved parameters as this object.
+#### **Classes**
 
-#### **Error Handling**
+Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics.
 
-Error Handling refers to how Express catches and processes errors that occur both synchronously and asynchronously. Express comes with a default error handler so you don’t need to write your own to get started.
+Classes are in fact "special functions", and just as you can define function expressions and function declarations, the class syntax has two components: class expressions and class declarations.
 
-It’s important to ensure that Express catches all errors that occur while running route handlers and middleware.
+One way to define a class is using a class declaration. To declare a class, you use the class keyword with the name of the class ("Rectangle" here).
 
-Errors that occur in synchronous code inside route handlers and middleware require no extra work. If synchronous code throws an error, then Express will catch and process it. For example:
+```javascript
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+```
 
-    app.get('/', function (req, res) {
-        throw new Error('BROKEN') // Express will catch this on its own.
-    })
+An important difference between function declarations and class declarations is that **function declarations are hoisted and class declarations are not**. You first need to declare your class and then access it
 
-For errors returned from asynchronous functions invoked by route handlers and middleware, you must pass them to the next() function, where Express will catch and process them. For example:
+#### **Strict Mode**
 
-    app.get('/', function (req, res, next) {
-        fs.readFile('/file-does-not-exist', function (err, data) {
-        if (err) {
-            next(err) // Pass errors to Express.
-        } else {
-            res.send(data)
-        }
-        })
-    })
+The body of a class is executed in strict mode, i.e., code written here is subject to stricter syntax for increased performance, some otherwise silent errors will be thrown, and certain keywords are reserved for future versions of ECMAScript.
 
-#### **Postman**
+##### **constructor()**
 
-[REST Web Services and Fetch](https://academy.engagelms.com/mod/page/view.php?id=45474)
+The constructor method is a special method of a class for creating and initializing an object of that class.
 
-#### **Express Router**
+    A constructor enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object.
 
-A router object is an isolated instance of middleware and routes. You can think of it as a “mini-application,” capable only of performing middleware and routing functions. Every Express application has a built-in app router.
+If you don't provide your own constructor, then a default constructor will be supplied for you. If your class is a base class, the default constructor is empty:
 
-A router behaves like middleware itself, so you can use it as an argument to ```app.use()``` or as the argument to another router’s ```use()``` method.
+```Javascript
+constructor()
+```
 
-The top-level express object has a ```Router()``` method that creates a new router object.
+If your class is a derived class, the default constructor calls the parent constructor, passing along any arguments that were provided:
 
-Once you’ve created a router object, you can add middleware and HTTP method routes (such as get, put, post, and so on) to it just like an application.
+```Javascript
+constructor(...args) {
+    super(...args)
+}
+```
 
-### 3. Testing
+- args for us are what we use to pass information between components ... aka props!
 
-#### **Test-Driven Development (TDD)**
+There can be only one special method with the name "constructor" in a class. Having more than one occurrence of a constructor method in a class will throw a SyntaxError error.
 
-TDD refers to a style of programming in which three activities are tightly interwoven: coding, testing (in the form of writing **unit tests**) and design (in the form of refactoring).
+    A constructor can use the super keyword to call the constructor of the super class.
 
-It can be succinctly described by the following set of rules:
+#### **Static Methods & Properties**
 
-- write a **single** unit test describing an aspect of the program
+The static keyword defines a static method or property for a class. Static members (properties and methods) are called without instantiating their class and cannot be called through a class instance. Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
-- run the test, which should fail because the program lacks that feature
+### 4. Introduction to React.js
 
-- write **just enough** code, the simplest possible, to make the test pass
+REACT DEV TOOLS -> has everyone installed it? If not lets do that now
 
-- **refactor** the code until it conforms to the simplicity criteria
+React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
 
-- repeat, **accumulating** unit tests over time
+Declarative views make your code **more predictable** and easier to debug.
 
-[Testing RN](https://reactnative.dev/docs/testing-overview)
+React is component-based, meaning you can build **encapsulated** components that manage their own state, then compose them to make complex UIs.
 
-[Testing React.js](https://reactjs.org/docs/testing.html)
+Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
 
-### 4. Socket IO
+- Setup
 
-[Socket IO & Testing Node](https://academy.engagelms.com/mod/scorm/player.php)
+CRA and how everything is connected with ReactDom.render()
+
+- Components
+
+Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+
+    2 types:
+
+    1. Functional
+    2. Class
+
+Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+
+- Props
+
+When React sees an element representing a user-defined component, it passes JSX attributes and children to this component as a single object. We call this object “props”.
+
+**Props are Read-Only**
+
+Whether you declare a component as a function or a class, it must never modify its own props.
+
+    Functions are called “pure” because they do not attempt to change their inputs, and always return the same result for the same inputs.
+
+React is pretty flexible but it has a single strict rule:
+
+_**All React components must act like pure functions with respect to their props.**_
+
+#### **State**
+
+State is similar to props, but it is private and fully controlled by the component.
+
+In addition to taking input data (accessed via this.props), a component can maintain internal state data (accessed via this.state). When a component’s state data changes, the rendered markup will be updated by re-invoking render().
+
+    Internal state alows for true encapsulation and reusability.
+
+#### **Do Not Modify State Directly**
+
+- Instead, use setState()
+
+- The only place where you can assign this.state is the constructor.
+
+- State Updates May Be Asynchronous
+
+*React may batch multiple setState() calls into a single update for performance. Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state.
+
+#### **A Simple Component**
+
+React components implement a render() method that takes input data and returns what to display. This example uses an XML-like syntax called JSX. Input data that is passed into the component can be accessed by render() via this.props.
+
+#### **A Stateful Component**
+
+In addition to taking input data (accessed via this.props), a component can maintain internal state data (accessed via this.state). When a component’s state data changes, the rendered markup will be updated by re-invoking render().
+
+In order to gain access to state or a components lifecycle method we must convert our functional component into a class. (you should always be writing components functional, until you need state or a lifecycle method and then convert it)
+
+_example.see_assets_
+
+#### **This**
+
+You have to be careful about the meaning of _this_ in JSX callbacks. In JavaScript, class methods are not bound by default. If you forget to bind this.handleClick and pass it to onClick, this will be undefined when the function is actually called.
+
+This is not React-specific behavior; it is a part of how functions work in JavaScript. Generally, **if you refer to a method without () after it, such as onClick={this.handleClick}, you should bind that method.**
+
+If calling bind annoys you, there are two ways you can get around this. If you are using the experimental public class fields syntax, you can use class fields to correctly bind callbacks.
+
+```Javascript
+class LoggingButton extends React.Component {
+  // This syntax ensures `this` is bound within handleClick.
+  // Warning: this is *experimental* syntax.
+  handleClick = () => {
+    console.log('this is:', this);
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        Click me
+      </button>
+    );
+  }
+}
+```
+
+*This syntax is enabled by default in Create React App.
+
+If you aren’t using class fields syntax, you can use an arrow function in the callback:
+
+```Javascript
+class LoggingButton extends React.Component {
+  handleClick() {
+    console.log('this is:', this);
+  }
+
+  render() {
+    // This syntax ensures `this` is bound within handleClick
+    return (
+      <button onClick={() => this.handleClick()}>
+        Click me
+      </button>
+    );
+  }
+}
+```
+
+The problem with this syntax is that a different callback is created each time the LoggingButton renders. In most cases, this is fine. However, if this callback is passed as a prop to lower components, those components might do an extra re-rendering. We generally recommend binding in the constructor or using the class fields syntax, to avoid this sort of performance problem.
+
+**_show binding of this in constructor_**
+
+### 5. Event Handling
+
+#### **Vanilla**
+
+[Events](https://www.w3schools.com/js/js_htmldom_events.asp)
+
+[Event Bubbling & Propogation](https://frontend.turing.edu/lessons/module-1/js-event-bubbling-and-delegation.html?ads_cmpid=6451354298&ads_adid=76255849919&ads_matchtype=&ads_network=g&ads_creative=517671727591&utm_term=&ads_targetid=dsa-19959388920&utm_campaign=&utm_source=adwords&utm_medium=ppc&ttv=2&gclid=Cj0KCQiA2NaNBhDvARIsAEw55hieoAUdHrTB1xeeLjD-Rvux_Q_bTvW1P_CjVQC5fqlDYXiOq4VqauIaAnwVEALw_wcB)
+
+[addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+
+#### **In React**
+
+Handling events with React elements is very similar to handling events on DOM elements. There are some syntax differences:
+
+- React events are named using camelCase, rather than lowercase.
+
+- With JSX you pass a function as the event handler, rather than a string.
+
+- You cannot return false to prevent default behavior in React. You must call preventDefault explicitly
+
+- You generally don’t need to call addEventListener to add listeners to a DOM element after it is created. Instead, just provide a listener when the element is initially rendered.
+
+- When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class.
