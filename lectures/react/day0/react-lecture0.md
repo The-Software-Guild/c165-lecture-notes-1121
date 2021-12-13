@@ -4,10 +4,12 @@ Learnign goals for week 2 => Re-focus. As we head into our third week we refocus
 
 ## Agenda
 
-    1) Engage Content
+    1) Pacing
     2) Express Review
     3) Testing
     4) Socket IO
+
+### 1. Pacing
 
 ### 2. Express.js
 
