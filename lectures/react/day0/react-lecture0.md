@@ -4,8 +4,10 @@ Learnign goals for week 2 => Re-focus. As we head into our third week we refocus
 
 ## Agenda
 
-    1) 
-    2) 
+    1) Engage Content
+    2) Express Review
+    3) Testing
+    4) Socket IO
 
 ### 2. Express.js
 
@@ -27,19 +29,19 @@ resource operation = ______ + ______ ?
 
 *resource operation does not equal endpoint!
 
-### 3. Nodemon
+#### **Nodemon**
 
 *check* *check* .... *check — 1 2*
 
-### 4. API's
+#### **API's**
 
 An application programming interface is a computing interface that defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made, how to make them, the data formats that should be used, the conventions to follow, etc. Below are a few of the most common conventions:
 
-#### SOAP
+##### _**SOAP**_
 
 **SOAP** (Simple Object Access Protocol) is a standards-based web services access protocol that has been around for a long time. Originally developed by Microsoft, SOAP isn’t as simple as the acronym would suggest. It uses XML and structure to expose their own arbitrary set of operations.
 
-#### REST
+##### _**REST**_
 
 Instead of using XML to make a request, **REST** (usually) relies on a simple URL. In some situations you must provide additional information, but most web services using REST rely exclusively on using the URL approach. REST can use four different HTTP 1.1 verbs (GET, POST, PUT, and DELETE) to perform tasks.
 
@@ -59,11 +61,15 @@ The guidlines for a "RESTful" api:
 
 6) code on demand
 
-#### N+1
+[Web Services](https://academy.engagelms.com/mod/page/view.php?id=45473)
+
+[REST API Design](https://academy.engagelms.com/mod/page/view.php?id=45475)
+
+##### _**N+1**_
 
 [REST API N+1 Problem](https://restfulapi.net/rest-api-n-1-problem/)
 
-### 5. Middleware
+#### **Middleware**
 
 Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
 
@@ -80,11 +86,11 @@ If the current middleware function does not end the request-response cycle, it m
 
 _see assets_
 
-### 6. URL Parameters & Queries
+#### **URL Parameters & Queries**
 
 [Anatomy of a URL](https://doepud.co.uk/blog/anatomy-of-a-url)
 
-#### **Parts of a URL**
+##### **Parts of a URL**
 
 - Base: http://www.amazon.com
 - Endpoint: http://www.amazon.com/images
@@ -104,7 +110,7 @@ movieRouter.get(":movieId", (req, res) => {
 })
 ```
 
-#### **Query String (typically used to filter results)**
+##### **Query String (typically used to filter results)**
 
 - Begins with the "?"
 - Built of key:value pairs
@@ -118,7 +124,7 @@ Here is an example of a URL with query strings attached:
 
 Your query parameters can be retrieved from the query object on the request object sent to your route (req.query). It is in the form of an object in which you can directly access the query parameters you care about. In this case Express handles all of the URL parsing for you and exposes the retrieved parameters as this object.
 
-### 7. Error Handling
+#### **Error Handling**
 
 Error Handling refers to how Express catches and processes errors that occur both synchronously and asynchronously. Express comes with a default error handler so you don’t need to write your own to get started.
 
@@ -142,9 +148,11 @@ For errors returned from asynchronous functions invoked by route handlers and mi
         })
     })
 
-### 8. Postman
+#### **Postman**
 
-### 2. Express Router
+[REST Web Services and Fetch](https://academy.engagelms.com/mod/page/view.php?id=45474)
+
+#### **Express Router**
 
 A router object is an isolated instance of middleware and routes. You can think of it as a “mini-application,” capable only of performing middleware and routing functions. Every Express application has a built-in app router.
 
@@ -171,3 +179,11 @@ It can be succinctly described by the following set of rules:
 - **refactor** the code until it conforms to the simplicity criteria
 
 - repeat, **accumulating** unit tests over time
+
+[Testing RN](https://reactnative.dev/docs/testing-overview)
+
+[Testing React.js](https://reactjs.org/docs/testing.html)
+
+### 4. Socket IO
+
+[Socket IO & Testing Node](https://academy.engagelms.com/mod/scorm/player.php)
