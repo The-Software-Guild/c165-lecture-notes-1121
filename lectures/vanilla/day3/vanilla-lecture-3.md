@@ -1,4 +1,4 @@
-# C165 Week 1 Vanilla JS Lecture 3
+# C165 Week 0 Vanilla JS Lecture 3
 
 Learning goals for week 0 day 3 => Today have explore data structures and algorithms within a very specific context.
 
