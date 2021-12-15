@@ -1,6 +1,6 @@
 # C165 Week 2 React Lecture 2
 
-Learnign goals for react day 2 => 
+Learnign goals for react day 2 => to finish our high level concepts of react, catch up with old assignments or materials, and make way for a more code heavy end of the week.
 
 ## Agenda
 
