@@ -63,7 +63,7 @@ function Square(A, B, C, D) {
 // Create a POST endpoint that adds a new object to the array.
 // Create a PUT endpoint that can update an object in the array.
 // Create a DELETE endpoint that can delete an object in the array.
-// Create a GET ONE endpoint that returns one object from the dataset.
+// Create a GET ONE endpoint that returns one object from the dataset. req.param & :wildcardSyntax
 // Create an endpoint that will query the dataset and return object(s) from it the based on certain criteria. 
 // Example. Your dataset includes football players and the team they play for. Create a route that will return all players that play for a specific team.
 
@@ -83,6 +83,7 @@ function Square(A, B, C, D) {
 // Delete (DELETE) an object(s) from the dataset.
 // GET ONE
 // Querying endpoint (i.e. a search bar that lets you filter through the list of _________)
+
 // Step 5: The frontend React app must be fully styled and responsive.
 
 // Outcome:
@@ -111,7 +112,6 @@ function Square(A, B, C, D) {
 // From here on out, all assessments must be 'fully styled and responsive' and described earlier — using a combination of media queries, css flexbox & grid
 // Make sure all of your code is 'PR & code review ready' per the shared resources in slack, please reach out if you need more detail on what I am looking for
 // In your PR's you can include any relevant media (screenshots, gifs, etc)
-// I have moved the assignment 'vending-machine' due date until Wednesday morning September 8th at 10:00am est when class starts
 
 // how-to:
 // https://www.take-a-screenshot.org/
