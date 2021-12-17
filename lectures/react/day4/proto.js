@@ -19,6 +19,8 @@ premiumUser.__proto__ = user;	//user is the prototype of premiumUser
 // new Object
 // new String
 
+// ''
+
 // Date.prototype // on the top of or protypical chain
 // const plantin = new Banana()
 // const plantin2 = new Banana()
@@ -33,6 +35,9 @@ premiumUser.__proto__ = user;	//user is the prototype of premiumUser
 // make any new bananas objects or interact or change the plantain3 in any way 
 // the prefered method of adding new or reasigning properties and methods in JS
 // is ALWAYS via protypes
+
+
+
 
 // internal function programming
 // const someFx = (cb) => {
