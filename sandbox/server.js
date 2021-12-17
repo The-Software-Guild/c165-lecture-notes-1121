@@ -1,5 +1,5 @@
 const express = require('express')
-const app = express()
+const app = express() // aliasing
 const morgan = require('morgan')
 
 // constants
@@ -11,7 +11,9 @@ const arrayEx = [{}, {}]
 app.use(express.json())
 app.use(morgan('dev'))
 
+// routers
 
+app.get('routePath', () => {})
 
 // routes
 app.get('/home', (err, req, res, next) => {
@@ -22,9 +24,9 @@ app.get('/home', (err, req, res, next) => {
      }
 }) // 
 
+app.use() // will be invoked and enact itself on all http req nbo matter what
 
 // app.get('/home', (req, res, next) => {
-
 //      console.log('second')
 //      // res.status(200).send('goodbye nodemon')
 // }) // 
