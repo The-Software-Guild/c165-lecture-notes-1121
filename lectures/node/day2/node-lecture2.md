@@ -1,4 +1,4 @@
-# Week 1 Lecture - C136 Day2
+# C165 Week 1 Node Lecture 2
 
 Learnign goals for node-day2 => Dive deeper into Express.js while being introduced to the postman GUI — an invaluable tool for any modern wed developer.
 
