@@ -1,47 +1,22 @@
 // notes.js
 
-// resource is a singular thing from the DB (in NR like mongo it will be a document)
-// collection is a group of similar resources
-// transaction singular logical unit of retrival ()
-// two main governance (BASE vs ACID)
+// security concern => privatization of data 
+// personal user information (account page) => me & another user #2
 
-// users => collection
-// user => resource
+// usability concerns => UI 
+// todo list 
 
-// to-do's => collection
-// to-do => resource (represented by a singular document)
+// cookie/session based
+// OAuth (SDK/API based) => Auth0, Auth2.0
 
-
-// BASE (non-relational)-basic vs ACID (relational)-rigid
-// basically available 
-// soft-state 
-// eventually consistent
+// token-based
 
 
-// Atomicity => either the transaction as awhole is excuted or fails (all or nothing)
-// Consistincy => all of your data must confine to all constraints (triggers, cascades)
-// Isolation => concurency (controlling things independently)
-// Durability => all changes made to DB are permanent once a singualr transaction is complete
+const person = {
+     location: 'bk'
+}
 
-
-// IAM
-// Auth0 (OAuth) => OCTA ()
-
-// SSO (single sign on) 
-// MFA (multi-factor-aithentication) => two-factor, 
-// 
-
-
-
-
-// state management
-// single source of truth located outside of our DF
-
-// it allows for the the passing of data between components
-// that are not within the normal flow of data
-
-// redux is a state management tool made by FB to combat prop drilling by Dan Abramov
-// redux is written in the Context API (providers <-> consumers)
+// JWT === 'JOT'
 
 
 
@@ -55,9 +30,30 @@
 
 
 
+// JWT's
+// header, payload, signature
+
+// const newToken = jwt('header', payload, sh256())
 
 
+// one-way-fx's
 
 
+// deterministic fx's 
+// all fx's in js are deterministic
+// JS has 1st class functions meanign we treat them just like variable:
+
+// 1) pass fx's as arguments ot other fx's
+// 2) fx expressions can be stored as values 
+// 3) they give us a predictable output given a similar message (input)
+
+// react components => pure functions but they also exhibit charecteristics of 1st class functions
+// it must NOT try to interact or agument its inputs (props) => you can never trust or should 
+// never count on props as a means to set state or create new data
+
+const someFx = () => {
+
+}
 
 
+// a singular file should export a singular component

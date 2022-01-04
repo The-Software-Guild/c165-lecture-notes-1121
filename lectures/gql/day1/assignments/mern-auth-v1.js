@@ -11,7 +11,7 @@
 // The Admin should have the access to the following pages: Shopping list, Add Product, User List, Add User. 
 // (For reference use the diagrams in the assets folder)
         
-// Normal users can see only the shopping list page.
+// Normal (non-admin) users can see only the shopping list page.
 // The admin user has the access to add a new admin user as well as normal use.
 
 // Hand in via github classroom: https://classroom.github.com/a/a3QEfkmb

@@ -1,77 +1,28 @@
 // notes.js
 
-// two itterables => arrays & strings
+// JWT's
+// header, payload, signature
 
-// if (condition) {
-//      // exececute this code
-// } else {
-//      // otyherwise execute this code
-// }
+// const newToken = jwt('header', payload, sh256())
 
 
-// equality
-// Object.is()
-// strict value ===
-// lose ==
+// one-way-fx's
 
 
-// need to write a fx that takes in 2 params 
-// and returns the sum of them
+// deterministic fx's 
+// all fx's in js are deterministic
+// JS has 1st class functions meanign we treat them just like variable:
 
+// 1) pass fx's as arguments ot other fx's
+// 2) fx's can be stored as values 
+// 3) they give us a predictable output given a similar message (input)
 
-// returns me a negative sum but sum is correct
-// const sum = (num1, num2) => {
-//      // some stuff
-//      return num1 + num2
-// }
+// react components => pure functions but they also exhibit charecteristics of 1st class functions
+// it must NOT try to interact or agument its inputs (props) => you can never trust or should never count on props as a means to set state or create new data
 
+const someFx = () => {
 
-// event issint pbeing passed down correct
-// const sum = (num1, num2) => {
-//      // some stuff
-//      return num1 + num2
-// }
-
-
-// {stack ovwerflow link} => link
-const sum = (num1, num2) => {
-     // some stuff
-     return num1 + num2
 }
 
-sum(3, 5) // 8 => -8
 
-// documentation, blog posts/you tube videos/forums, SO
-// when googling I use the problem + the language + the error + an action word
-
-
-// Node.js
-
-// a JS local runtime enviroment based off the chrome V8 engine
-// ultimately allowing us to write JS code outside the browser
-// non-blocking I/O async (different from JS single-threaded)
-
-
-// polyfill
-
-// modularization => abstraction + encapsualtion
-
-
-// package-lock.json => holds reference to ALL of our 
-// dependencies in a non=redunant format
-
-// EVERY TIME you clone something from a remote repository 
-// down to your local machine your FIRST command should be to install the dependenceis locally
-// npm install from the directory containing the package-lock.json
-
-
- 
-
-
-
-
-
-
-
-
-
+// a singular file should export a singular component
