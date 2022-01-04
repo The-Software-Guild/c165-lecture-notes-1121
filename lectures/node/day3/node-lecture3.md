@@ -1,4 +1,4 @@
-# Week 1 Lecture - C136 Day3
+# C165 Week 1 Node Lecture 3
 
 Learnign goals for node-day3 => A short lecture on Express Router and testing will make way for a heavy workload reinforcing concepts from yesterday while exploring socket.io and unit testing within node applications.
 
