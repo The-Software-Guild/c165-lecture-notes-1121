@@ -16,7 +16,7 @@
 // directories, external node modules, routes, programs you will need ... etc. Screenshot or hand these 
 // in via your PR or assets folder.
 
-// Step-2: Backend Routes & ORM
+// Step-2: Backend Routes & ODM
 // Using Node.js, Express.js, Mongoose, MongoDB, and Postman create all 6 of your CRUD routes
 // You should have two collections: Users & Bugs
 // Screenshot, videocast/screen-record, or gif these routes working and include them in your PR or assets folder
