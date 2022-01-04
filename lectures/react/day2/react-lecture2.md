@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 62eaf0bc15e93957e68225ecadd674d3e7ea5917
 # C165 Week 2 React Lecture 1
 
 Learnign goals for react day 1 => As we dive into React we first touch on a few vanilla JS concepts that will prepare us for using the most popular javascipt framework in the world. Buckle-up.
@@ -277,6 +280,7 @@ Handling events with React elements is very similar to handling events on DOM el
 - You generally don’t need to call addEventListener to add listeners to a DOM element after it is created. Instead, just provide a listener when the element is initially rendered.
 
 - When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class.
+<<<<<<< HEAD
 =======
 # C165 Week 2 React Lecture 2
 
@@ -530,3 +534,5 @@ The great thing about unit tests is that they are quick to write and run. Theref
 
 #### **Mocking & Integration Tests**
 >>>>>>> react-day3-start
+=======
+>>>>>>> 62eaf0bc15e93957e68225ecadd674d3e7ea5917
