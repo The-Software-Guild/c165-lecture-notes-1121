@@ -11,7 +11,7 @@
 // create a new promise
 // chainable
 
-// async =>  await res.(skadnkloasnm)
+// async =>  await res.()
 // es6 syntactical sugar
 // create new promises
 
