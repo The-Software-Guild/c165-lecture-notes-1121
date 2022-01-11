@@ -5,7 +5,6 @@ const morgan = require('morgan')
 // constants
 const PORT = 5000;
 
-const arrayEx = [{}, {}]
 
 // application level middleware
 app.use(express.json())

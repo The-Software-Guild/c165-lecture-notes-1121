@@ -5,8 +5,8 @@ Learnign goals => We will go over some key nouns & verbs we need to dive deeper 
 ## Agenda
 
     1) Day 1 Recap
+    2) Fields & Arguments
     2) Queries and Mutations
-    3) Fields & Arguments
     4) Aliases
     5) Apollo Server Schema Basics
     6) Apollo Client
@@ -16,9 +16,22 @@ Learnign goals => We will go over some key nouns & verbs we need to dive deeper 
 - GraphQL
 - Apollo
 
-### 1. Queries and Mutations
-
 ### 2. Fields & Arguments
+
+#### Fields
+
+At its simplest, GraphQL is about asking for specific fields on objects. Let's start by looking at a very simple query and the result we get when we run it:
+
+INSERT_FIELD PICTURE
+
+You can see immediately that the query has exactly the same shape as the result. This is essential to GraphQL, because you always get back what you expect, and the server knows exactly what fields the client is asking for.
+
+The field ```name``` returns a ```String``` type, in this case the name of the main hero of Star Wars, ```"R2-D2"```.
+
+#### Arguments
+
+
+### 2. Queries and Mutations
 
 ### 3. Aliases
 
