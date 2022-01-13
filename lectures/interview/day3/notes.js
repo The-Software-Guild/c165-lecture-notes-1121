@@ -1,6 +1,7 @@
 // notes.js
 
-// your not working with a recruiter 
+// your goal should be to identify good fits and apply to low amounts of places. 1-3 a day with a few day breaks where you work on technical thigns
+// and do not interview stuff. 
 
 // general pointers
 //   -self-awareness and identifing strengths & weakness (lean into our strengths)
@@ -26,6 +27,9 @@
           -professional headshots (500$)
      5. Github
 */
+
+
+
 
 
 // saftey & professionalism
@@ -79,6 +83,25 @@
 
 
 // burnout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
